@@ -1,0 +1,57 @@
+site_name: SecNotes
+theme:
+  name: material
+  features:
+    #- navigation.tabs
+    - navigation.footer
+    - navigation.top # 一键回顶部
+
+  palette: 
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+
+
+# 仓库链接
+repo_url: https://github.com/h4m5t/SecNotes
+repo_name: h4m5t/SecNotes
+# 作者
+site_author: 'h4m5t'
+# 版权信息
+copyright: Copyright &copy; 2023 h4m5t
+# 源文件目录
+docs_dir: 'docs'
+# 生成静态文件目录
+# site_dir: 'site'
+# 额外信息
+extra:
+    # 版本号
+    version: 1.0
+    social:
+    - icon: fontawesome/brands/zhihu
+      link: https://www.zhihu.com/people/h4m5t
+    - icon: fontawesome/brands/github
+      link: https://github.com/h4m5t
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/h4m5t
+    - icon: fontawesome/brands/medium
+      link: https://medium.com/@h4m5t
+
+# markdown扩展
+markdown_extensions:
+
+# 导航
+# nav:
+#     - Home: index.md
+#     - Getting started:
+#       - Installation: install.md
+#     - Reference:
+#       - Reference: reference.md

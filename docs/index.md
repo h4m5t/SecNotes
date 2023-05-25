@@ -67,6 +67,4 @@ mkdocs gh-deploy --force
 
 https://github.com/Bypass007/Safety-Project-Collection
 
-
-
-![](assets/download.jpg)
+![](assets/images/test.jpg)

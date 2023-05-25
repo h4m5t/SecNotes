@@ -69,5 +69,27 @@ https://github.com/Bypass007/Safety-Project-Collection
 
 ![](assets/images/test.jpg)
 
-显示图片：assets/images/test.jpg
+显示图片测试：assets/images/test.jpg
+
+
+
+## Release Notes
+
+2023/5/24
+
+搭建文档，构建自动化发布流
+
+2023/5/25
+
+加入一些安全相关学习资料
+
+2023/5/26
+
+将文档换成文件夹内的形式，将资料放到对应文件夹，方便管理。
+
+更换网页logo和favicon
+
+<img src="/assets/logo.png" style="zoom:20%;" align=left />
+
+
 

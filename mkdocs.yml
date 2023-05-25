@@ -1,5 +1,6 @@
 site_name: SecNotes
 theme:
+  logo: assets/logo.png
   name: material
   features:
     #- navigation.tabs
@@ -7,14 +8,17 @@ theme:
     - navigation.top # 一键回顶部
 
   palette: 
+    
     # Palette toggle for light mode
     - scheme: default
+      primary: white
       toggle:
         icon: material/weather-sunny
         name: Switch to dark mode
 
     # Palette toggle for dark mode
     - scheme: slate
+      primary: grey
       toggle:
         icon: material/weather-night
         name: Switch to light mode

@@ -1,18 +1,18 @@
----
-title: index
----
+# Index
 
-# SecNotes
+## 说明
 
 记录安全学习笔记。持续更新。
 
-本项目地址：https://github.com/h4m5t/SecNotes
+界面：https://h4m5t.github.io/SecNotes/
+
+源地址：https://github.com/h4m5t/SecNotes
+
+
 
 ## 文档构建
 
-### 环境
-
-GithubPages+Mkdocs+mkdocs-material+GitHub Actions
+> GithubPages+Mkdocs+mkdocs-material+GitHubActions
 
 
 ### with GitHub Actions
@@ -63,3 +63,10 @@ mkdocs gh-deploy --force
 
 
 
+## Referecnes
+
+https://github.com/Bypass007/Safety-Project-Collection
+
+
+
+![](assets/download.jpg)

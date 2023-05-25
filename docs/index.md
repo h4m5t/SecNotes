@@ -89,7 +89,7 @@ https://github.com/Bypass007/Safety-Project-Collection
 
 更换网页logo和favicon
 
-<img src="/assets/logo.png" style="zoom:20%;" align=left />
+<img src="assets/logo.png" style="zoom:20%;" align=left />
 
 
 

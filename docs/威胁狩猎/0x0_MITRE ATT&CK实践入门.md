@@ -10,15 +10,15 @@ title: MITRE ATT&CK实践入门
 
 相关资料：
 
- [ATT&CK实践入门.pdf](assets\ATT&CK实践入门.pdf) 
+ [ATT&CK实践入门.pdf](assets/ATT&CK实践入门.pdf) 
 
 
 
- [MITRE ATT&CK实践入门.xmind](assets\MITRE ATT&CK实践入门.xmind) 
+ [MITRE ATT&CK实践入门.xmind](assets/MITRE ATT&CK实践入门.xmind) 
 
- [MITRE ATT&CK实践入门.pdf](assets\MITRE ATT&CK实践入门.pdf) 
+ [MITRE ATT&CK实践入门.pdf](assets/MITRE ATT&CK实践入门.pdf) 
 
- [mitre-getting-started-with-attack-october-2019.pdf](assets\mitre-getting-started-with-attack-october-2019.pdf) 
+ [mitre-getting-started-with-attack-october-2019.pdf](assets/mitre-getting-started-with-attack-october-2019.pdf) 
 
 
 ## 〇、概要

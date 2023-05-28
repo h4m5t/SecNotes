@@ -10,7 +10,20 @@
 -   Ansible：一种集成 IT 系统的配置管理、应用部署、执行特定任务的开源平台
 -   Saltstack：一个具备puppet与func功能为一身的集中化管理平台
 
+## 资产巡航系统
+-   巡风: 巡风是一款适用于企业内网的漏洞快速应急，巡航扫描系统。
+-   ARL: 资产侦察灯塔系统旨在快速侦察与目标关联的互联网资产，构建基础资产信息库。
+-   linglong: 一款甲方资产巡航扫描系统。系统定位是发现资产，进行端口爆破。
 
+## 漏洞扫描系统
+-   nikto
+-   nexpose
+-   nessus
+-   openVAS GVM（Greenbone Vulnerability Management）
+-   zaproxy
+-   AWVS
+-   W13scan
+-   X-ray
 
 ## 漏洞管理
 
@@ -19,18 +32,15 @@
 -   SRCMS:企业应急响应与缺陷管理系统 
 -   laravel-src:基于 Laravel 的开源安全应急响应中心平台
 -   DefectDojo:一个安全程序和漏洞管理工具
--   Fuxi-Scanner：一款开源的网络安全检测工具，适用于中小型企业对企业信息系统进行安全巡航检测
+-   Fuxi：一款开源的网络安全检测工具，适用于中小型企业对企业信息系统进行安全巡航检测https://github.com/jeffzh3ng/fuxi
 -   SeMF：企业内网安全管理平台，包含资产管理，漏洞管理，账号管理，知识库管、安全扫描自动化功能模块，可用于企业内部的安全管理
-
-
+-   Faraday： Open Source Vulnerability Management Platform
 
 ## 安全开发
 
 -   secguide：腾讯代码安全指南开源，涉及C/C++、JavaScript、Node、Go、Java、Python六门编程语言
 -   rhizobia_J：JAVA安全SDK及编码规范
 -   rhizobia_P：PHP安全SDK及编码规范
-
-
 
 ## 自动化代码审计
 
@@ -43,21 +53,17 @@
 -   Find Security Bugs：用于Java Web应用程序的安全审计
 -   Hades：静态代码脆弱性检测系统
 
-
-
-
 ## IAST
 
 -   火线~洞态IAST：一款专为甲方安全人员、代码审计工程师和0 Day漏洞挖掘人员量身打造的辅助工具，可用于集成devops环境进行漏洞检测、作为代码审计的辅助工具和自动化挖掘0 Day
 -   openrasp-iast：一款灰盒扫描工具，能够结合应用内部hook点信息精确的检测漏洞
 -   Semmle QL：Semmle公司提供了一个免费的检测平台，可以分析用Java，Python，JavaScript，TypeScript，C＃，Go，C和C ++编写的项目
 
-
-
 ## WAF
 
 -   ngx_lua_waf：一个基于LUA-nginx的模块（openresty）的网络应用防火墙
 -   OpenRASP：一款免费、开源的应用运行时自我保护产品
+-   NAXSI: NAXSI is an open-source, high performance, low rules maintenance WAF for NGINX
 -   ModSecurity：一个入侵侦测与防护引擎
 -   锦衣盾：基于openresty(nginx+lua)开发的下一代web应用防火墙
 -   x-waf：适用于中小企业的云waf 
@@ -75,11 +81,10 @@
 -   麒麟堡垒机：开源版只支持一部分功能，剩下的功能需要购买
 
 
-
 ## HIDS
 
 -   OSSEC：一款开源的IDS检测系统，包括了日志分析、完整性检查、rook-kit检测，基于时间的警报和主动响应
--   Wazuh：一个免费的，开源的企业级安全监控解决方案，用于威胁检测，完整性监控，事件响应和合规性
+-   Wazuh：一个免费的，开源的企业级安全监控解决方案，用于威胁检测，完整性监控，事件响应和合规性（也是EDR）
 -   Suricata：一个免费的开源，成熟，快速和强大的网络威胁检测引擎
 -   Snort：网络入侵检测和预防系统
 -   Osquery:一个SQL驱动操作系统检测和分析工具
@@ -93,6 +98,7 @@
 -   Security Onion:免费开源网络安全监控系统
 -   OpenWIPS-ng：一款开源的模块化无线IPS（Intrusion Prevention System，入侵防御系统）
 -   Moloch: 网络流量收集与分析
+-   ELKeid: Elkeid是一款可以满足主机，容器与容器群，Serverless等多种工作负载加载安全需要的开源解决方案，来源于字节跳动内部最佳实践。
 
 
 
@@ -100,6 +106,8 @@
 
 -   Zeek：一个功能强大的网络分析框架
 -   Kismet：一种无线网络和设备检测器，嗅探器，驱动工具和WIDS（无线入侵检测）框架
+-   Malcolm: Malcolm is a powerful, easily deployable network traffic analysis tool.
+-   Arkime: Arkime (formerly Moloch) is an open source, large scale, full packet capturing, indexing, and database system.
 
 
 
@@ -148,6 +156,7 @@
 -   cuckoo：一个自动化的动态恶意软件分析系统
 -   theZoo：一个恶意软件分析项目
 -   OpenDLP：一个免费的，开源的，基于代理和无代理的，集中管理，可大规模分发的数据丢失防护工具
+-   OpenRASP： 百度针对RASP概念推出的一款开源免费的自适应安全产品
 
 
 
@@ -181,7 +190,6 @@
 -   Shockpot：一个Web应用程序蜜罐，旨在找到试图利用Bash远程代码漏洞的攻击者，CVE-2014-6271
 
 
-
 ## 风控系统
 
 -   TH-Nebula：星云风控系统是一套互联网风控分析和检测平台
@@ -192,3 +200,28 @@
 -   RiskControl:轻量级JAVA实时业务风控系统
 
 -   Urule:一款纯Java规则引擎，可快速实现规则的定义、维护与发布。
+
+## 威胁情报
+-   SpiderFoot: SpiderFoot is an open source intelligence (OSINT) automation tool. 
+
+## 网络监控系统
+-   Centreon
+-   zabbix
+-   cacti
+-   prometheus
+-   PRTG
+-   librenms
+-   Nagios
+
+## 其他
+-   抗DDOS
+-   应急响应工具箱
+-   安全合规建设: OpenSCAP
+-   ISO27001
+-   安全应急响应中心：XSRC开源平台
+-   SDL
+-   SecDevOps
+-   DevSecOps
+-   云安全
+-   零信任
+-   分布式配置管理：Apollo，Disconf

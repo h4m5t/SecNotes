@@ -1,6 +1,7 @@
 # 优秀甲方安全开源项目
 
 > 基于https://github.com/Bypass007/Safety-Project-Collection
+> https://techblog.bozho.net/list-of-open-source-security-tools
 
 ## 资产管理
 

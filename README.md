@@ -453,3 +453,8 @@ https://github.com/fabacab/awesome-cybersecurity-blueteam
 \[8] 渗透测试：数十款重要工具介绍,  [E安全](https://www.secrss.com/articles?author=E安全),  https://www.secrss.com/articles/2409
 
 \[9] Vulnerability fatigue – why you need to get on top of patch management, https://orangecyberdefense.com/global/blog/threat/vulnerability-fatigue-why-you-need-to-get-on-top-of-patch-management/
+
+
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/h4m5t/SecNotes.svg)](https://starchart.cc/h4m5t/SecNotes)

@@ -26,6 +26,8 @@
 -   W13scan
 -   X-ray
 -   w3af: web vulnerability scanner
+-   fscan： 一款内网综合扫描工具，方便一键自动化、全方位漏扫扫描。
+-   Nuclei: Fast and customizable vulnerability scanner based on simple YAML based DSL.
 
 ## 漏洞管理
 
@@ -223,6 +225,8 @@
 
 ## 其他
 -   抗DDOS
+-   DDOS
+    - hping
 -   应急响应工具箱
     - StackStorm：SOAR platform
     - GRR：incident response and remote live forensics
@@ -245,3 +249,4 @@
     - ClamAV: open source antivirus angine
     - YARA: The pattern matching swiss knife for malware researchers
     - VirusTotal： 在线病毒检测
+-   Linux磁盘扩容工具: gparted  growpart

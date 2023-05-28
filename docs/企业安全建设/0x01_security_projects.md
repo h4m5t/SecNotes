@@ -25,6 +25,7 @@
 -   AWVS
 -   W13scan
 -   X-ray
+-   w3af: web vulnerability scanner
 
 ## 漏洞管理
 
@@ -100,6 +101,7 @@
 -   OpenWIPS-ng：一款开源的模块化无线IPS（Intrusion Prevention System，入侵防御系统）
 -   Moloch: 网络流量收集与分析
 -   ELKeid: Elkeid是一款可以满足主机，容器与容器群，Serverless等多种工作负载加载安全需要的开源解决方案，来源于字节跳动内部最佳实践。
+-   Velociraptor: Velociraptor is an advanced digital forensic and incident response tool that enhances your visibility into your endpoints.
 
 
 
@@ -121,6 +123,8 @@
 -   OpenSOC：致力于提供一个可扩展和可扩展的高级安全分析工具
 -   Prelude：一个结合了其他各种开源工具的SIEM框架
 -   MozDef：Mozilla防御平台,一套实时集成化平台，能够实现监控、反应、协作并改进相关保护功能
+-   Elastic SIEM：SIEM functionality by Elasticsearch
+-   Sigma – Generic Signature Format for SIEM Systems
 
 
 
@@ -158,6 +162,7 @@
 -   theZoo：一个恶意软件分析项目
 -   OpenDLP：一个免费的，开源的，基于代理和无代理的，集中管理，可大规模分发的数据丢失防护工具
 -   OpenRASP： 百度针对RASP概念推出的一款开源免费的自适应安全产品
+-   osquery: real-time querying of endpoint data
 
 
 
@@ -199,11 +204,13 @@
 -   Drools：基于java的功能强大的开源规则引擎
 -   Radar风控引擎:轻量级实时风控引擎，适用于反欺诈应用场景，极简的配置，真正做到了开箱即用
 -   RiskControl:轻量级JAVA实时业务风控系统
-
 -   Urule:一款纯Java规则引擎，可快速实现规则的定义、维护与发布。
 
 ## 威胁情报
 -   SpiderFoot: SpiderFoot is an open source intelligence (OSINT) automation tool. 
+-   OpenCTI – threat intelligence platform
+-   OpenDXL – open source tools for security intelligence sharing
+
 
 ## 网络监控系统
 -   Centreon
@@ -217,6 +224,11 @@
 ## 其他
 -   抗DDOS
 -   应急响应工具箱
+    - StackStorm：SOAR platform
+    - GRR：incident response and remote live forensics
+    - TheHive: incident response / SOAR platform
+    - Shuffle: open source SOAR platform
+    - Kansa： PowerShell incident response
 -   安全合规建设: OpenSCAP
 -   ISO27001
 -   安全应急响应中心：XSRC开源平台
@@ -226,3 +238,10 @@
 -   云安全
 -   零信任
 -   分布式配置管理：Apollo，Disconf
+-   防火墙
+    - pfsense: the most popular open source firewall
+    - OPNSense: hardened BSD-based firewall
+-   病毒检测
+    - ClamAV: open source antivirus angine
+    - YARA: The pattern matching swiss knife for malware researchers
+    - VirusTotal： 在线病毒检测

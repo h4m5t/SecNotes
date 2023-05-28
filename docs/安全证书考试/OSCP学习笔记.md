@@ -10,7 +10,8 @@ https://www.offsec.com/courses/pen-200/
 
 https://github.com/noraj/OSCP-Exam-Report-Template-Markdown
 
-## GitHub上的一些资料
+## 一些资料
+https://falconspy.medium.com/unofficial-oscp-approved-tools-b2b4e889e707
 
 https://github.com/stars/h4m5t/lists/oscp
 

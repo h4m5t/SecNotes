@@ -24,6 +24,7 @@
 -   zaproxy
 -   AWVS
 -   W13scan
+-   APPscan
 -   X-ray
 -   w3af: web vulnerability scanner
 -   fscan： 一款内网综合扫描工具，方便一键自动化、全方位漏扫扫描。
@@ -69,10 +70,11 @@
 -   OpenRASP：一款免费、开源的应用运行时自我保护产品
 -   NAXSI: NAXSI is an open-source, high performance, low rules maintenance WAF for NGINX
 -   ModSecurity：一个入侵侦测与防护引擎
--   锦衣盾：基于openresty(nginx+lua)开发的下一代web应用防火墙
+-   JXWAF锦衣盾：基于openresty(nginx+lua)开发的下一代web应用防火墙
 -   x-waf：适用于中小企业的云waf 
 -   Juggler：可以与waf联动 ，一个也许能骗到黑客的系统
-
+-   openstar
+-   OpenWAF
 
 
 ## 堡垒机
@@ -234,8 +236,9 @@
     - Shuffle: open source SOAR platform
     - Kansa： PowerShell incident response
 -   安全合规建设: OpenSCAP
+-   基线检查，安全审计: Lynis
 -   ISO27001
--   安全应急响应中心：XSRC开源平台
+-   安全应急响应中心：XSRC开源平台,laravel-src
 -   SDL
 -   SecDevOps
 -   DevSecOps
@@ -250,3 +253,6 @@
     - YARA: The pattern matching swiss knife for malware researchers
     - VirusTotal： 在线病毒检测
 -   Linux磁盘扩容工具: gparted  growpart
+-   上网行为管理/准入/认证： PacketFence，CAS,openldap
+-   网盘: NextCloud
+-   文件共享： OnionShare

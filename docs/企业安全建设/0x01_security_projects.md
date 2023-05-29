@@ -3,6 +3,9 @@
 > 基于https://github.com/Bypass007/Safety-Project-Collection
 > https://techblog.bozho.net/list-of-open-source-security-tools
 
+企业安全建设：
+> https://github.com/AnyeDuke/Enterprise-Security-Skill
+
 ## 资产管理
 
 -   BlueKing CMDB：一个面向资产及应用的企业级配置管理平台

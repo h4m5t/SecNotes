@@ -6,6 +6,9 @@
 企业安全建设：
 > https://github.com/AnyeDuke/Enterprise-Security-Skill
 
+信息安全架构图:
+> https://www.mindomo.com/zh/mindmap/information-security-architecture-725bcf2f525a318a158154cf9b54f3ee
+
 ## 资产管理
 
 -   BlueKing CMDB：一个面向资产及应用的企业级配置管理平台

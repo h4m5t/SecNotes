@@ -9,6 +9,35 @@
 源地址：https://github.com/h4m5t/SecNotes
 
 
+## 待学习/复习
+### 工具
+* Mysql
+* Fuzz
+* shellcode编写
+* 免杀
+* wireshark
+* sqlmap
+* wfuzz
+* ncat/socat
+* ettercap
+* arpspoof
+* postman
+* vulnhub
+* RASP
+* Nuclei
+* Django
+* AWVS
+* Nessus
+
+### 靶场
+* DVWA
+* bWAPP
+* vulstack
+* Vulhub
+* Vulnhub
+* vulstudy
+* vulfocus
+* vulapps
 
 ## 文档构建
 

@@ -18,16 +18,21 @@
 * wireshark
 * sqlmap
 * wfuzz
-* ncat/socat
+* Ffuf
+* Pwntools
+* netcat/ncat/socat
 * ettercap
 * arpspoof
 * postman
 * vulnhub
 * RASP
 * Nuclei
+* httpX
 * Django
 * AWVS
 * Nessus
+* log4j
+* Dnslog
 
 ### 靶场
 * DVWA

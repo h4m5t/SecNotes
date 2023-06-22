@@ -33,6 +33,10 @@
 * Nessus
 * log4j
 * Dnslog
+* Cobalt Strike
+* C2:Empire，Sliver,Covenant,Villain,Havoc
+* honeypot:Tpot,cowrie,dionaea,mhn,Ehoney
+* NIST
 
 ### 靶场
 * DVWA

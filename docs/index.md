@@ -130,5 +130,6 @@ https://github.com/Bypass007/Safety-Project-Collection
 
 <img src="assets/logo.png" style="zoom:20%;" align=left />
 
-
+2023/6/23
+增加企业安全建设几篇文章
 

@@ -105,6 +105,8 @@ mkdocs gh-deploy --force
 ## Referecnes
 
 https://github.com/Bypass007/Safety-Project-Collection
+https://github.com/satan1a/TheRoadOfSO
+https://github.com/satan1a/awesome-cybersecurity-blueteam-cn
 
 ![](assets/images/test.jpg)
 
@@ -129,6 +131,7 @@ https://github.com/Bypass007/Safety-Project-Collection
 更换网页logo和favicon
 
 <img src="assets/logo.png" style="zoom:20%;" align=left />
+
 
 2023/6/23
 增加企业安全建设几篇文章

@@ -51,6 +51,12 @@ extra:
 
 # markdown扩展
 markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences 
+  - pymdownx.inlinehilite
+
+
 
 # 导航
 # nav:

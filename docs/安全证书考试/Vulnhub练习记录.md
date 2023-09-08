@@ -135,10 +135,6 @@ pandoc "$template_file" \
 
 ### 靶场
 
-靶场文件：
-
-\\file.tp-link.com.cn\网络管理课\5.信息安全运维与管理\98.学习资料\靶场
-
 ### 已完成：
 
 DC-1

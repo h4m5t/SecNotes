@@ -36,6 +36,27 @@
 -   fscan： 一款内网综合扫描工具，方便一键自动化、全方位漏扫扫描。
 -   Nuclei: Fast and customizable vulnerability scanner based on simple YAML based DSL.
 
+
+Ubuntu装AWVS和Nessus
+
+```
+-----------------------------------------------
+docker run -d -p 2333:3443 secfa/awvs
+
+AWVS
+
+admin@admin.com
+Admin123
+
+--------------------------------------------------
+docker run --name Nessus -d -p 8834:8834 -e ACTIVATION_CODE=NSYE-6H4X-CWFF-V4TR-94MT -e USERNAME=admin -e PASSWORD=passwd tenableofficial/nessus
+
+nessus
+
+user
+passwd
+```
+
 ## 漏洞管理
 
 -   insight：洞察-宜信集应用系统资产管理、漏洞全生命周期管理、安全知识库管理三位一体的平台

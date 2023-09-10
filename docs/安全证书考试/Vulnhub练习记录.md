@@ -32,7 +32,7 @@ git clone https://hub.nuaa.cf/maurosoria/dirsearch.git --depth 1
 
 https://www.youtube.com/watch?v=MQGozZzHUwQ
 
-Ubuntu安装(可能需要换清华源)
+Ubuntu/Kali安装(可能需要换清华源)
 
 ```
 apt install texlive-latex-recommended    

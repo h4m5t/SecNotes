@@ -5,11 +5,6 @@
 https://www.offsec.com/courses/pen-200/
 
 
-
-## 做好笔记和报告
-
-https://github.com/noraj/OSCP-Exam-Report-Template-Markdown
-
 ## 一些资料
 
 https://falconspy.medium.com/unofficial-oscp-approved-tools-b2b4e889e707

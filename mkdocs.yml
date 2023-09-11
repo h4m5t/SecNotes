@@ -6,6 +6,7 @@ theme:
     #- navigation.tabs
     - navigation.footer
     - navigation.top # 一键回顶部
+    - navigation.indexes
 
   palette: 
     

@@ -22,6 +22,47 @@ echo '127.0.0.1 h4m5t.localdomain h4m5t' >> /etc/hosts
 git clone https://hub.nuaa.cf/maurosoria/dirsearch.git --depth 1
 ```
 
+配置终端
+
+终端的提示符有特殊符号，生成报告会报错，进行修改。
+
+```
+cp ~/.zshrc ~/.zshrc.bak
+vi ~/.zshrc
+```
+
+对下面部分进行修改。
+
+```
+configure_prompt() {
+    prompt_symbol=@
+    # Skull emoji for root terminal
+    #[ "$EUID" -eq 0 ] && prompt_symbol=💀
+    case "$PROMPT_ALTERNATIVE" in
+        twoline)
+            PROMPT=$'%F{%(#.blue.green)}${debian_chroot:+($debian_chroot)─}${VIRTUAL_ENV:+($(basename $VIRTUAL_ENV))─}(%B%F{%(#.red.blue)}%n'$prompt_symbol$'%m%b%F{%(#.blue.green)})-[%B%F{reset}%(6~.%-1~/…/%4~.%5~)%b%F{%(#.blue.green)}]\n%B%(#.%F{red}#.%F{blue}$)%b%F{reset} '
+            # Right-side prompt with exit codes and background processes
+            #RPROMPT=$'%(?.. %? %F{red}%B⨯%b%F{reset})%(1j. %j %F{yellow}%B⚙%b%F{reset}.)'
+            ;;
+        oneline)
+            PROMPT=$'${debian_chroot:+($debian_chroot)}${VIRTUAL_ENV:+($(basename $VIRTUAL_ENV))}%B%F{%(#.red.blue)}%n@%m%b%F{reset}:%B%F{%(#.blue.green)}%~%b%F{reset}%(#.#.$) '
+            RPROMPT=
+            ;;
+        backtrack)
+            PROMPT=$'${debian_chroot:+($debian_chroot)}${VIRTUAL_ENV:+($(basename $VIRTUAL_ENV))}%B%F{red}%n@%m%b%F{reset}:%B%F{blue}%~%b%F{reset}%(#.#.$) '
+            RPROMPT=
+            ;;
+    esac
+    unset prompt_symbol
+}
+```
+
+保存重载。
+
+```
+source ~/.zshrc
+```
+
 
 
 ### report
@@ -31,6 +72,8 @@ git clone https://hub.nuaa.cf/maurosoria/dirsearch.git --depth 1
 参考：https://github.com/noraj/OSCP-Exam-Report-Template-Markdown
 
 https://www.youtube.com/watch?v=MQGozZzHUwQ
+
+注意：报告使用英文字母和字符，如果使用中文会报错。
 
 Ubuntu/Kali安装(可能需要换清华源)
 

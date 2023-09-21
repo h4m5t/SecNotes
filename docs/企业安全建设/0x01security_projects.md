@@ -190,6 +190,7 @@ passwd
 -   Scout： URL 监控系统
 -   OpenDnsdb：开源的基于Python语言的DNS管理系统 
 -   cuckoo：一个自动化的动态恶意软件分析系统
+-   CAPEv2: It was derived from Cuckoo with the goal of adding automated malware unpacking and config extraction
 -   theZoo：一个恶意软件分析项目
 -   OpenDLP：一个免费的，开源的，基于代理和无代理的，集中管理，可大规模分发的数据丢失防护工具
 -   OpenRASP： 百度针对RASP概念推出的一款开源免费的自适应安全产品
@@ -279,6 +280,8 @@ passwd
     - ClamAV: open source antivirus angine
     - YARA: The pattern matching swiss knife for malware researchers
     - VirusTotal： 在线病毒检测
+    - Malice: a free open source version of VirusTotal
+    - capa: https://github.com/mandiant/capa
 -   Linux磁盘扩容工具: gparted  growpart
 -   上网行为管理/准入/认证： PacketFence，CAS,openldap
 -   网盘: NextCloud

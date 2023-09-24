@@ -17,6 +17,8 @@ https://github.com/stars/h4m5t/lists/oscp
 
 https://blog.werner.wiki/how-did-i-get-oscp/
 
+https://mp.weixin.qq.com/s/Y8d9gZe_-56qcpI3zJ7kMg
+
 http://www.hackdig.com/11/hack-547862.htm
 
 https://icybersec.gitbook.io/cybersecuritynote/an-quan-zheng-shu/oscp/kao-zheng-jing-yan-fen-xiang

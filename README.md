@@ -1,6 +1,8 @@
 # SecNotes
 
 >   记录安全学习笔记
+>
+> 网页地址：https://h4m5t.top/SecNotes/
 
 ## 🧾目录
 

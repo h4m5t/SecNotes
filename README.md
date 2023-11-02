@@ -1,5 +1,7 @@
 # SecNotes
 
+![SecNotes](https://socialify.git.ci/h4m5t/SecNotes/image?description=1&font=Inter&forks=1&issues=1&language=1&logo=https%3A%2F%2Fraw.githubusercontent.com%2Fh4m5t%2FSecNotes%2Fmain%2Fdocs%2Fassets%2Flogo.png&name=1&owner=1&pattern=Circuit%20Board&stargazers=1&theme=Light)
+
 >   记录安全学习笔记
 >
 > 网页地址：https://h4m5t.top/SecNotes/

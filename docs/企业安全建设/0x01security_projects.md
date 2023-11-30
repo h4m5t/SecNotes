@@ -253,6 +253,23 @@ passwd
 -   librenms
 -   Nagios
 
+## 项目管理系统
+
+* UVdesk   https://github.com/uvdesk/community-skeleton
+* OsTicket （简单经典、功能较少）  https://github.com/osTicket/osTicket
+* faveo-helpdesk （没有计时功能）https://github.com/ladybirdweb/faveo-helpdesk
+* RT  https://github.com/bestpractical/rt   https://try.requesttracker.io/     https://demo.request-tracker.fr/Prefs/MyRT.html
+* OpenProject 功能强大，项目管理 https://github.com/opf/openproject
+* ferry 单据审批，类似OA https://github.com/lanyulei/ferry
+* https://github.com/blackholll/loonflow  OA审批系统
+* Redmine 基本满足需求  https://github.com/redmine/redmine
+* 禅道
+* Jira
+* Youtrack
+* https://github.com/django-helpdesk/django-helpdesk
+* https://github.com/itimor/one-workflow
+
+
 ## 其他
 -   抗DDOS
 -   DDOS

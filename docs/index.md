@@ -38,6 +38,12 @@
 * honeypot:Tpot,cowrie,dionaea,mhn,Ehoney
 * NIST
 * Yakit
+* Beef
+* k8s
+* sandbox
+* GO
+* https://github.com/taielab/awesome-hacking-lists#go
+* https://github.com/AV1080p/Hacking-With-Golang
 
 ### 靶场
 * HTB

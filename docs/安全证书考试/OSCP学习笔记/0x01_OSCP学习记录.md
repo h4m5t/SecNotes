@@ -222,7 +222,11 @@ pandoc "$template_file" \
 --resource-path=.:src
 ```
 
+使用示例：
 
+```
+./generate.sh ./src/OSCP-exam-report-template_OS_v1.md ./output/test.pdf
+```
 
 ## 练习进度
 

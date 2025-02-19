@@ -11,36 +11,7 @@
 
 ## 待学习/复习
 ### 工具
-* Mysql
-* Fuzz
-* shellcode编写
-* 免杀
-* wireshark
-* sqlmap
-* wfuzz
-* Ffuf
-* Pwntools
-* netcat/ncat/socat
-* ettercap
-* arpspoof
-* postman
-* vulnhub
-* RASP
-* Nuclei
-* httpX
-* Django
-* AWVS
-* Nessus
-* log4j
-* Dnslog
-* Cobalt Strike
-* C2:Empire，Sliver,Covenant,Villain,Havoc
-* honeypot:Tpot,cowrie,dionaea,mhn,Ehoney
-* NIST
-* Yakit
-* Beef
-* k8s
-* sandbox
+* honeypot:Tpot,cowrie,dionaea,mhn,Ehoney,opencanary
 * GO
 * https://github.com/taielab/awesome-hacking-lists#go
 * https://github.com/AV1080p/Hacking-With-Golang

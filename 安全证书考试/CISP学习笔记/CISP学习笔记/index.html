@@ -1,0 +1,3739 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="h4m5t">
+      
+      
+      
+        <link rel="prev" href="../../CCNP%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CCNP/">
+      
+      
+        <link rel="next" href="../../OSCP%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/0x01_OSCP%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
+    
+    
+      
+        <title>CISP学习笔记 - SecNotes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cisp" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="SecNotes" class="md-header__button md-logo" aria-label="SecNotes" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SecNotes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CISP学习笔记
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="grey" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/h4m5t/SecNotes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    h4m5t/SecNotes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="SecNotes" class="md-nav__button md-logo" aria-label="SecNotes" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    SecNotes
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/h4m5t/SecNotes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    h4m5t/SecNotes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    BlueTeam
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            BlueTeam
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BlueTeam/0x03_blue_team-resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    蓝队学习笔记
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BlueTeam/0x0_%E8%93%9D%E9%98%9F%E6%A6%82%E8%A7%88/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    蓝队概览
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BlueTeam/0x1_%E8%93%9D%E9%98%9F%E8%B5%84%E6%BA%90%E6%95%B4%E5%90%88/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    蓝队资源整合
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    RedTeam
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            RedTeam
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../RedTeam/0x02_red_team/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    红队学习笔记
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../RedTeam/0x03%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E8%BF%9B%E9%98%B6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    渗透测试进阶
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../RedTeam/0x0_%E7%BA%A2%E9%98%9F%E6%A6%82%E8%A7%88/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    红队概览
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../RedTeam/0x1_%E8%96%84%E5%BC%B1%E7%AB%AF%E5%8F%A3%E5%92%8C%E6%9C%8D%E5%8A%A1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    薄弱端口和服务
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../RedTeam/0x2_%E5%B8%B8%E8%A7%81%E7%BD%91%E7%AB%99%E6%9E%B6%E6%9E%84%E5%92%8C%E6%94%BB%E5%87%BB%E6%89%8B%E6%B3%95/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    常见网站架构和攻击手法
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    SOC安全运营
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            SOC安全运营
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SOC%E5%AE%89%E5%85%A8%E8%BF%90%E8%90%A5/0x0_%E5%AF%B9%E5%AE%89%E5%85%A8%E8%BF%90%E8%90%A5%E7%9A%84%E7%90%86%E8%A7%A3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    对安全运营的理解
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SOC%E5%AE%89%E5%85%A8%E8%BF%90%E8%90%A5/0x2_%E5%AE%89%E5%85%A8%E8%BF%90%E8%90%A5%E5%81%9A%E4%BB%80%E4%B9%88/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    安全运营做什么
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SOC%E5%AE%89%E5%85%A8%E8%BF%90%E8%90%A5/0x3_%E5%AE%89%E5%85%A8%E8%BF%90%E8%90%A5%E7%9A%84%E8%A6%81%E7%B4%A0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    安全运营的要素
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SOC%E5%AE%89%E5%85%A8%E8%BF%90%E8%90%A5/0x4_%E5%AE%89%E5%85%A8%E8%BF%90%E8%90%A5%E7%9B%B8%E5%85%B3%E6%96%87%E7%AB%A0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    安全运营相关文章
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    企业安全建设
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            企业安全建设
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BC%81%E4%B8%9A%E5%AE%89%E5%85%A8%E5%BB%BA%E8%AE%BE/0x01security_projects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    优秀甲方安全开源项目
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BC%81%E4%B8%9A%E5%AE%89%E5%85%A8%E5%BB%BA%E8%AE%BE/0x02%E5%AE%89%E5%85%A8%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    安全思维导图
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BC%81%E4%B8%9A%E5%AE%89%E5%85%A8%E5%BB%BA%E8%AE%BE/0x03%E5%AE%89%E5%85%A8%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    安全系统架构设计
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BC%81%E4%B8%9A%E5%AE%89%E5%85%A8%E5%BB%BA%E8%AE%BE/0x04%E4%B8%80%E4%B8%AA%E4%BA%BA%E7%9A%84%E5%AE%89%E5%85%A8%E9%83%A8%E4%B9%8B%E4%BC%81%E4%B8%9A%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%BB%BA%E8%AE%BE%E8%A7%84%E5%88%92/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    一个人的安全部之企业信息安全建设规划
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BC%81%E4%B8%9A%E5%AE%89%E5%85%A8%E5%BB%BA%E8%AE%BE/0x05%E5%AE%89%E5%85%A8%E6%84%8F%E8%AF%86%E6%95%99%E8%82%B2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    安全意识教育
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BC%81%E4%B8%9A%E5%AE%89%E5%85%A8%E5%BB%BA%E8%AE%BE/3x0_%E5%AE%89%E5%85%A8%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%B9%B3%E5%8F%B0%E7%9A%84%E6%9E%B6%E6%9E%84/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    安全数据分析平台的架构
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BC%81%E4%B8%9A%E5%AE%89%E5%85%A8%E5%BB%BA%E8%AE%BE/3x1_ATTACK%E7%9F%A9%E9%98%B5%E7%9A%84SOC%E5%BB%BA%E8%AE%BE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ATT&amp;CK矩阵的SOC建设
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BC%81%E4%B8%9A%E5%AE%89%E5%85%A8%E5%BB%BA%E8%AE%BE/3x3_%E7%9B%B8%E5%85%B3%E6%96%87%E7%AB%A0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    相关文章
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BC%81%E4%B8%9A%E5%AE%89%E5%85%A8%E5%BB%BA%E8%AE%BE/3x4_%E4%BC%81%E4%B8%9A%E9%A3%8E%E6%8E%A7%E5%B9%B3%E5%8F%B0%E5%BB%BA%E8%AE%BE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    企业业务风控平台建设
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BC%81%E4%B8%9A%E5%AE%89%E5%85%A8%E5%BB%BA%E8%AE%BE/3x5_%E7%94%B5%E6%8A%A5%E7%9B%91%E6%8E%A7%E5%B9%B3%E5%8F%B0%E5%BB%BA%E8%AE%BE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    电报监控平台建设
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BC%81%E4%B8%9A%E5%AE%89%E5%85%A8%E5%BB%BA%E8%AE%BE/3x6_%E4%BC%81%E4%B8%9A%E5%AE%89%E5%85%A8%E4%B8%AD%E4%BB%B7%E5%80%BC%E9%9C%80%E6%B1%82%E5%92%8C%E6%88%90%E7%86%9F%E5%BA%A6%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    企业安全中价值需求和成熟度模型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BC%81%E4%B8%9A%E5%AE%89%E5%85%A8%E5%BB%BA%E8%AE%BE/3x7_%E7%90%86%E8%A7%A3%E4%BC%81%E4%B8%9A%E5%AE%89%E5%85%A8%E8%BF%90%E8%90%A5%E4%B8%AD%E7%9A%84%E5%A8%81%E8%83%81%E4%BA%A4%E6%8D%A2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    理解企业安全运营中的威胁交换
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BC%81%E4%B8%9A%E5%AE%89%E5%85%A8%E5%BB%BA%E8%AE%BE/3x8_MITRE_Shield%E7%9F%A5%E8%AF%86%E5%BA%93/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MITRE Shield知识库
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BC%81%E4%B8%9A%E5%AE%89%E5%85%A8%E5%BB%BA%E8%AE%BE/3x9_%E6%95%B0%E6%8D%AE%E9%A9%B1%E5%8A%A8%E5%AE%89%E5%85%A82.0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据驱动安全2.0
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BC%81%E4%B8%9A%E5%AE%89%E5%85%A8%E5%BB%BA%E8%AE%BE/3xA_%E5%85%A5%E4%BE%B5%E6%A3%80%E6%B5%8B_%E9%98%B2%E6%8A%A4%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%BB%BA%E8%AE%BE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    入侵检测&amp;防护系统概述
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    威胁建模
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            威胁建模
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A8%81%E8%83%81%E5%BB%BA%E6%A8%A1/0x08_threat_simulation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    攻击仿真
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    威胁情报
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            威胁情报
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/0x05_threat_intelligence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    威胁情报
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/1x0_%E5%AE%89%E5%85%A8%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5%E7%AE%80%E8%BF%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    安全威胁情报简述
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/1x1_%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5%E5%85%B1%E4%BA%AB/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    如何实现威胁情报共享
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/1x2_%E5%A8%81%E8%83%81%E7%8B%A9%E7%8C%8E/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    威胁狩猎
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/1x3_%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5%E4%B8%8E%E5%85%A8%E6%B5%81%E9%87%8F%E5%BC%82%E5%B8%B8%E6%A3%80%E6%B5%8B%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    威胁情报与全流量异常检测案例分析
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/1x4_%E7%A7%BB%E5%8A%A8%E6%81%B6%E6%84%8F%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    移动恶意代码分析及威胁情报
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/1x5_%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E6%83%85%E6%8A%A5%E6%90%9C%E9%9B%86/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    如何进行情报搜集？
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/1x6_%E6%83%85%E6%8A%A5%E7%A0%94%E5%88%A4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    情报研判
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/1x7_%E7%BB%88%E7%AB%AF%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    终端数据挖掘与威胁狩猎
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/1x8_WeChat%E5%86%85%E5%AE%B9%E5%AE%A1%E6%9F%A5%E7%A0%94%E7%A9%B61/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WeChat内容审查研究
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/1x9_%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5%E8%87%AA%E5%8A%A8%E5%8C%96%E7%94%9F%E4%BA%A7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    威胁情报自动化生产
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/1xB_%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5%E5%BA%93%E5%BB%BA%E8%AE%BE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    威胁情报库建设
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/1xC_%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5%E8%BF%90%E8%90%A5%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    威胁情报的生命周期
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/1xD_%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5%E6%95%B0%E6%8D%AE%E6%BA%90/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    威胁情报数据源·整合
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/1xE_%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5%E7%9A%84%E8%90%BD%E5%9C%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    威胁情报的落地
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/1xF_%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5%E7%9A%84%E5%9B%B0%E5%A2%83/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    威胁情报的困境
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/1xG_%E6%83%85%E6%8A%A5%E7%A0%94%E7%A9%B6%E6%96%B9%E6%B3%95%E8%AE%BA_%E6%94%B6%E9%9B%86/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    对情报收集工作的展望
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/1xH_%E5%85%B3%E4%BA%8E%E6%83%85%E6%8A%A5%E5%AD%A6%E7%9A%84%E8%B5%84%E6%96%99%E9%9B%86%E5%90%88/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    关于情报学的资料集合
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/1xI_%E6%83%85%E6%8A%A5%E9%A9%B1%E5%8A%A8%E5%AE%89%E5%85%A8%E8%87%AA%E5%8A%A8%E5%8C%96/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    情报驱动安全自动化
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/1xJ_%E5%9B%BD%E5%86%85%E5%A4%96%E5%AE%89%E5%85%A8%E5%85%AC%E5%8F%B8%E6%95%B4%E7%90%86/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    国内外安全公司·整合
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/1xK_xday%E5%A8%81%E8%83%81%E5%88%86%E6%9E%90%E4%B8%8E%E5%AF%B9%E6%88%98%E6%8A%80%E5%B7%A7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    X-Day威胁分析与对战技巧
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/1xL_%E5%A6%82%E4%BD%95%E8%AF%84%E4%BC%B0%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    如何评估威胁情报？
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/1xM_%E5%AF%B9Starlink%E7%9A%84%E6%B5%8B%E7%BB%98/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    对Starlink的测绘
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    威胁狩猎
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            威胁狩猎
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A8%81%E8%83%81%E7%8B%A9%E7%8C%8E/0x04_threat_hunting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    威胁狩猎
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A8%81%E8%83%81%E7%8B%A9%E7%8C%8E/0x0_MITRE%20ATT%26CK%E5%AE%9E%E8%B7%B5%E5%85%A5%E9%97%A8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MITRE ATT&CK实践入门
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A8%81%E8%83%81%E7%8B%A9%E7%8C%8E/0x1_%E5%A8%81%E8%83%81%E7%8B%A9%E7%8C%8E%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    威胁狩猎学习笔记
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A8%81%E8%83%81%E7%8B%A9%E7%8C%8E/0x2_%E5%A8%81%E8%83%81%E7%8B%A9%E7%8C%8E%E5%AE%9E%E6%88%98/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    威胁狩猎实战
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A8%81%E8%83%81%E7%8B%A9%E7%8C%8E/0x3_%E5%85%A8%E6%B5%81%E9%87%8F%E5%A8%81%E8%83%81%E7%8B%A9%E7%8C%8E/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    全流量威胁狩猎
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A8%81%E8%83%81%E7%8B%A9%E7%8C%8E/0x4_%E5%A8%81%E8%83%81%E7%8B%A9%E7%8C%8E%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    威胁狩猎相关资源
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A8%81%E8%83%81%E7%8B%A9%E7%8C%8E/0x7_%E7%9B%B8%E5%85%B3%E7%A0%94%E7%A9%B6%E8%80%85%E5%92%8C%E5%9B%A2%E9%98%9F/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    相关研究者和团队
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A8%81%E8%83%81%E7%8B%A9%E7%8C%8E/0x8_%E7%A4%BE%E4%BA%A4%E5%AA%92%E4%BD%93%E6%83%85%E6%8A%A5%E6%90%9C%E9%9B%86%E5%AE%9E%E6%88%98/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    社交媒体情报搜集实战
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A8%81%E8%83%81%E7%8B%A9%E7%8C%8E/0x9_%E4%BD%8E%E4%BF%A1%E8%AA%89%E7%BD%91%E7%AB%99%E6%89%98%E7%AE%A1%E6%9C%8D%E5%8A%A1%E6%B8%85%E5%8D%95/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    低信誉网站托管服务清单
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A8%81%E8%83%81%E7%8B%A9%E7%8C%8E/0xA_%E5%A8%81%E8%83%81%E7%8B%A9%E7%8C%8E%E4%B9%8B%E8%A1%8C%E4%B8%BA%E5%90%91%E9%87%8F/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    威胁狩猎之行为向量
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A8%81%E8%83%81%E7%8B%A9%E7%8C%8E/0xB_%E7%8B%A9%E7%8C%8E%E6%95%B0%E6%8D%AE%E6%94%B6%E9%9B%86/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    狩猎数据收集
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%A8%81%E8%83%81%E7%8B%A9%E7%8C%8E/2x0_README/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    威胁狩猎章节概要
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    安全事件响应
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            安全事件响应
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%AE%89%E5%85%A8%E4%BA%8B%E4%BB%B6%E5%93%8D%E5%BA%94/0x06_incident_response/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    应急响应
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%AE%89%E5%85%A8%E4%BA%8B%E4%BB%B6%E5%93%8D%E5%BA%94/6x0_%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数字取证和事件响应
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%AE%89%E5%85%A8%E4%BA%8B%E4%BB%B6%E5%93%8D%E5%BA%94/6x1_%E6%BA%AF%E6%BA%90%E6%A1%88%E4%BE%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    溯源案例整理
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%AE%89%E5%85%A8%E4%BA%8B%E4%BB%B6%E5%93%8D%E5%BA%94/6x2_%E6%95%B0%E6%8D%AE%E9%A9%B1%E5%8A%A8%E7%9A%84%E5%A8%81%E8%83%81%E6%A3%80%E6%B5%8B%E5%92%8C%E6%94%BB%E5%87%BB%E6%BA%AF%E6%BA%90_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据驱动的威胁检测和攻击溯源—学习笔记
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%AE%89%E5%85%A8%E4%BA%8B%E4%BB%B6%E5%93%8D%E5%BA%94/6x3_%E6%97%A5%E5%BF%97%E3%80%81%E5%91%8A%E8%AD%A6%E5%92%8C%E4%BA%8B%E4%BB%B6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    日志、告警和事件
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%AE%89%E5%85%A8%E4%BA%8B%E4%BB%B6%E5%93%8D%E5%BA%94/6x5_%E4%BB%8E%E6%B5%81%E9%87%8F%E4%B8%AD%E8%BF%9B%E8%A1%8C%E6%81%B6%E6%84%8FC2%E4%BF%A1%E6%81%AF%E7%9A%84%E6%A3%80%E6%B5%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    从流量中检测C2通信
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%AE%89%E5%85%A8%E4%BA%8B%E4%BB%B6%E5%93%8D%E5%BA%94/6x6_%E9%9A%90%E8%94%BD%E9%80%9A%E8%AE%AF%E7%9A%84%E6%A3%80%E6%B5%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    隐蔽通讯的检测
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%AE%89%E5%85%A8%E4%BA%8B%E4%BB%B6%E5%93%8D%E5%BA%94/6x9_%E5%B8%B8%E8%A7%81%E7%AB%AF%E5%8F%A3%E4%B8%8E%E5%AF%B9%E5%BA%94%E6%9C%8D%E5%8A%A1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    端口与对应服务清单
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    安全证书考试
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            安全证书考试
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_1" id="__nav_10_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CCNP学习笔记
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_1">
+            <span class="md-nav__icon md-icon"></span>
+            CCNP学习笔记
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CCNP%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CCNP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    学习
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_10_2" id="__nav_10_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CISP学习笔记
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_10_2">
+            <span class="md-nav__icon md-icon"></span>
+            CISP学习笔记
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    CISP学习笔记
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    CISP学习笔记
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      第一章 信息安全保障
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      第二章 信息安全管理
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      第三章 安全工程和运营
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      第四章 计算环境安全
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      第五章 软件安全开发
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      第六章 网络安全监管
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      第七章 物理环境与网络通信安全
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      第八章 信息安全评估
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      第九章 信息安全支撑技术
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      第十章 业务连续性
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_3" id="__nav_10_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    OSCP学习笔记
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_3">
+            <span class="md-nav__icon md-icon"></span>
+            OSCP学习笔记
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OSCP%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/0x01_OSCP%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OSCP学习笔记
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OSCP%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Metasploitable/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vulnhub-Metasploitable
+    
+      <br>
+      <small>OSCP Exam Report</small>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_4" id="__nav_10_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    信息安全工程师
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_4">
+            <span class="md-nav__icon md-icon"></span>
+            信息安全工程师
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    信安工程师学习笔记
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    相关资料
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%B7%A5%E7%A8%8B%E5%B8%88/%E6%95%99%E7%A8%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第二版教程学习笔记
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    数字取证
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            数字取证
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E5%AD%97%E5%8F%96%E8%AF%81/0x09_digital_forensics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数字取证
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    网络学习
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            网络学习
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0/0x01/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    网络基础
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    蜜罐
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            蜜罐
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%9C%9C%E7%BD%90/0x07_honeypots/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    蜜罐
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    靶场练习
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            靶场练习
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E9%9D%B6%E5%9C%BA%E7%BB%83%E4%B9%A0/0x01/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    靶场练习记录
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      第一章 信息安全保障
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      第二章 信息安全管理
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      第三章 安全工程和运营
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      第四章 计算环境安全
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      第五章 软件安全开发
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      第六章 网络安全监管
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      第七章 物理环境与网络通信安全
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      第八章 信息安全评估
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      第九章 信息安全支撑技术
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      第十章 业务连续性
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="cisp">CISP学习笔记</h1>
+<h2 id="_1">第一章 信息安全保障</h2>
+<p>安全的根本目的是保证组织业务可持续性运行。信息安全不是局部，而是整体，需要考虑成本因素。</p>
+<p>信息安全问题的根源：</p>
+<ul>
+<li>内因：信息系统复杂性导致漏洞的存在不可避免</li>
+<li>外阴：环境因素、人为因素</li>
+</ul>
+<p>信息安全的特征：</p>
+<ul>
+<li>系统性</li>
+<li>动态性</li>
+<li>无边界</li>
+<li>非传统</li>
+</ul>
+<p>信息安全风险具有不可逆的特点，需要信息安全法律采取预防为主、积极主动的法律原则。</p>
+<p>信息安全发展阶段：</p>
+<ul>
+<li>通信安全阶段（安全措施：加密）</li>
+<li>计算机安全阶段：（安全措施：操作系统的访问控制）</li>
+<li>信息系统安全阶段（安全措施：防火墙、漏洞扫描、入侵检测、V PN等）</li>
+</ul>
+<p>我国信息安全保障工作：</p>
+<p>总体要求：积极防御、综合防范</p>
+<p>主要原则：技术与管理并重，正确处理安全与发展的关系。</p>
+<p>PPDR：Policy（策略）、Protection（防护）、Detection（检测）和Response（响应）</p>
+<p>更强调控制和对抗、考虑了管理的因素，强调安全管理的持续性，安全策略的动态性。</p>
+<p>信息安全保障技术框架（IATF），美国国家安全局NSA制定。</p>
+<p>核心思想：深度防御</p>
+<p>三个要素：人、技术、操作</p>
+<p>四个焦点领域：</p>
+<ul>
+<li>保护网络和基础设施</li>
+<li>保护区域边界</li>
+<li>保护计算环境</li>
+<li>支持性基础设施</li>
+</ul>
+<p>信息系统安全保障评估框架-评估模型：</p>
+<ul>
+<li>将风险和策略作为信息系统安全保障的基础和核心</li>
+<li>强调安全贯彻信息系统生命周期</li>
+<li>强调综合保障的观念</li>
+</ul>
+<p>舍伍德业务安全架构（Sherwood Applied Business Security Architecture, SABSA）是一个企业级的安全架构框架。</p>
+<ul>
+<li>背景层</li>
+<li>概念层</li>
+<li>逻辑层</li>
+<li>物理层</li>
+<li>组件层</li>
+<li>运营层</li>
+</ul>
+<h2 id="_2">第二章 信息安全管理</h2>
+<p>安全风险管理基本过程</p>
+<p>理解风险管理的背景建立、风险评估、风险处理、批准监督、监控审查和沟通咨询六个方面的工作目标及内容；</p>
+<p>安全措施的成本与资产价值之间的平衡</p>
+<p>基于风险的思想是所有信息系统安全保障工作的核心思想！</p>
+<p>风险管理基本过程：</p>
+<ul>
+<li>监控审查</li>
+<li>背景建立</li>
+<li>风险评估</li>
+<li>风险处理</li>
+<li>批准监督</li>
+<li>沟通咨询</li>
+</ul>
+<p>ISO/IEC 27001:2013标准中定义的PDCA过程方法是指规划（Plan）、实施（Do）、检查（Check）和行动/改进（Act）</p>
+<p>人力资源安全</p>
+<ul>
+<li>任用前</li>
+<li>任用中</li>
+<li>任用终止和变化</li>
+</ul>
+<p>信息安全方针应由组织的管理层颁布，而不是信息技术部门</p>
+<p>信息安全评估以自评估为主。</p>
+<p>在ACL机制中，文件权限与客体进行关联，而不是主体。</p>
+<p>一级文件中一般为安全方针、策略文件；二级文件中一般为管理规范制度；三级文件一般为操作手册和流程；四级文件一般表单和管理记录。</p>
+<h2 id="_3">第三章 安全工程和运营</h2>
+<p>安全工程的4个方面：</p>
+<ul>
+<li>策略（Policy）</li>
+<li>机制（Mechanism）</li>
+<li>保证（Assurance）</li>
+<li>动机（Incentive）</li>
+</ul>
+<p>能力成熟度模型基础（CMM：Capability Maturity Model）</p>
+<p>现代统计过程控制理论表明通过强调生产过程的高质量和在过程中组织实施的成熟性可以低成本地生产出高质量产品；</p>
+<p>SSE-CMM 信息系统安全工程能力成熟模型</p>
+<p>风险过程包括的评估威胁、评估脆弱性、评估影响及评估安全风险。</p>
+<p>11个PA分为风险过程、工程过程、保证过程。</p>
+<p><strong>能力级别：</strong></p>
+<p>1级：非正规执行级</p>
+<p>2级：规划和跟踪级</p>
+<p>3级：充分定义级</p>
+<p>4级：量化控制级</p>
+<p>5级：持续改进级</p>
+<h2 id="_4">第四章 计算环境安全</h2>
+<p>Windows系统的标识</p>
+<p>安全主体（账户、计算机、服务等）</p>
+<p>安全标识符（Security Identifier，SID）</p>
+<p>•安全主体的代表（标识用户、组和计算机账户的唯一编码）</p>
+<p>•范例：S-1-5-21-1736401710-1141508419-1540318053-1000</p>
+<p>Linux/Unix系统的标识</p>
+<p>安全主体：用户标识号（User ID）</p>
+<p>最小化部署：明确需要的功能和组件，不需要的服务和功能都关闭</p>
+<p>恶意代码检测技术：</p>
+<ul>
+<li>特征码扫描</li>
+<li>行为检测</li>
+</ul>
+<p>恶意代码分析技术：</p>
+<ul>
+<li>动态分析</li>
+<li>静态分析</li>
+</ul>
+<p>网络安全漏洞扫描两大核心技术：端口扫描技术和漏洞扫描技术</p>
+<h2 id="_5">第五章 软件安全开发</h2>
+<p>软件生命周期模型</p>
+<ul>
+<li>瀑布模型</li>
+<li>迭代模型</li>
+<li>增量模型</li>
+<li>快速原型模型</li>
+<li>螺旋模型</li>
+<li>净室模型</li>
+</ul>
+<p>软件安全开发覆盖软件整个生命周期</p>
+<p>需求分析阶段考虑软件的安全需求</p>
+<p>在设计阶段设计符合安全准则的功能</p>
+<p>编码阶段保证开发的代码符合安全编码规范</p>
+<p>安全测试和运行维护确保安全需求、安全设计、安全编码各个环节得以正确有效的实施</p>
+<p><strong>软件安全问题越早解决成本越低</strong></p>
+<p>安全开发生命周期（Security Development Lifecycle，SDL）</p>
+<p>威胁建模流程：</p>
+<ul>
+<li>确定对象</li>
+<li>识别威胁</li>
+<li>评估威胁</li>
+<li>消减威胁</li>
+</ul>
+<p>安全设计原则：</p>
+<ul>
+<li>最小特权原则</li>
+<li>权限分离原则</li>
+<li>最少共享机制原则</li>
+<li>完全中立原则</li>
+<li>心理可接受度原则</li>
+<li>默认故障处理保护原则</li>
+<li>经济机制原则</li>
+<li>不信任原则</li>
+<li>纵深防御原则</li>
+<li>保护最薄弱环节原则</li>
+<li>公开设计原则</li>
+<li>隐私保护原则</li>
+<li>攻击面最小化原则</li>
+</ul>
+<p>模糊测试，也称Fuzzing测试，一种通过提供非预期的输入并监视异常结果来发现软件故障的方法。</p>
+<p>软件安全的三根支柱是风险管理、软件安全接触点和安全知识。</p>
+<h2 id="_6">第六章 网络安全监管</h2>
+<p>网络空间 已成为领土、领海、领空、太空之外的第五空间或人类“第二类生存空间”，成为国家主权延伸的新疆域。</p>
+<p>网络安全法章节：</p>
+<ul>
+<li>总则</li>
+<li>网络安全支持与促进</li>
+<li>网络运行安全</li>
+<li>网络信息安全</li>
+<li>监测预警与应急处置</li>
+<li>法律责任</li>
+<li>附则</li>
+</ul>
+<p>主要国际标准化组织</p>
+<ul>
+<li>国际标准化组织（ISO）</li>
+<li>国际电工委员会（IEC）</li>
+<li>Internet工程任务组（IETF）</li>
+<li>国际电信联盟（ITU）及国际电信联盟远程通信标准化组织（ITU-T）</li>
+</ul>
+<p>国家标准化组织（美国）</p>
+<ul>
+<li>美国国家标准化协会（ANSI）</li>
+<li>美国国家标准技术研究院（NIST）</li>
+</ul>
+<p>中国国家标准化管理委员会，是我国最高级别的国家标准机构。国家标准委决定成立全国信息安全标准化技术委员会。</p>
+<p>国家标准分类：</p>
+<p>GB 强制性国家标准</p>
+<ul>
+<li>一经颁布必须贯彻执行，违反则构成经济或法律方面的责任</li>
+</ul>
+<p>GB/T 推荐性国家标准</p>
+<ul>
+<li>自愿采用的标准，共同遵守的技术依据，严格贯彻执行</li>
+</ul>
+<p>GB/Z 国家标准指导性技术文件</p>
+<ul>
+<li>
+<p>由于技术发展过程中或其他理由，将来可能达成一致意见指导性技术文件</p>
+</li>
+<li>
+<p>实施后3年内必须进行复审</p>
+</li>
+</ul>
+<p>等级保护工作流程：</p>
+<ul>
+<li>定级</li>
+<li>备案</li>
+<li>差距分析</li>
+<li>建设整改</li>
+<li>验收测评</li>
+<li>定期复查</li>
+</ul>
+<h2 id="_7">第七章 物理环境与网络通信安全</h2>
+<p>典型的物理安全问题</p>
+<ul>
+<li>自然灾害（地震、雷击、暴雨、泥石流等）</li>
+<li>环境因素（治安、交通、人流及经营性设施风险）</li>
+<li>设备安全、介质安全、传输安全</li>
+</ul>
+<p>OSI七层模型：</p>
+<ul>
+<li>应用层：直接与软件应用程序交互，为用户提供网络服务，如网页浏览、电子邮件等。</li>
+<li>表示层：处理数据的表现形式，包括加密/解密、压缩/解压缩以及数据格式转换。</li>
+<li>会话层：管理不同计算机上的应用程序之间的会话，控制对话的建立、管理和终止。</li>
+<li>传输层：确保端到端的数据可靠传输，负责错误检测和恢复、流量控制，典型协议有TCP和UDP。</li>
+<li>网络层：处理分组的路由选择和逻辑地址（IP地址）的分配，决定数据如何从源头到达目的地。</li>
+<li>数据链路层：在同一网络内的设备之间进行可靠的帧传输，包含错误检测与纠正，并使用物理地址（如MAC地址）进行通信。</li>
+<li>物理层：涉及实际的物理连接，定义了电信号、接口硬件、电缆类型等，负责比特流的透明传输。</li>
+</ul>
+<p>五类安全服务</p>
+<p>鉴别服务、访问控制服务、数据完整性服务、数据保密性服务和抗抵赖服务</p>
+<p>八种安全机制</p>
+<p>加密、数据签名、访问控制、数据完整性、鉴别交换、业务流填充、路由控制和公正</p>
+<p>TCP/IP模型：</p>
+<ul>
+<li>应用层（Application Layer）：
+  应用层直接面向用户提供网络服务，涵盖了所有高层协议，例如HTTP、HTTPS、FTP、SMTP、DNS等。这一层负责处理特定的应用程序细节，如网页浏览、电子邮件发送等。</li>
+<li>传输层（Transport Layer）：
+  传输层主要负责端到端的通信，保证数据能够准确无误地从源主机传送到目的主机。该层包括两个重要的协议：TCP（传输控制协议）和UDP（用户数据报协议）。TCP提供可靠的、基于连接的服务，而UDP则提供不可靠的、无连接的服务。</li>
+<li>互联网层（Internet Layer）：
+  互联网层负责处理分组在网络中的路由选择，确保数据包能够从源头到达目的地。核心协议是IP（因特网协议），此外还包括ICMP（因特网控制消息协议）和ARP（地址解析协议）等。IPv4和IPv6是目前使用最广泛的两个版本。</li>
+<li>网络接口层（Network Interface Layer）：
+  网络接口层，有时也称为链路层或数据链路层，涉及将IP数据包封装成适合在物理网络上传输的帧格式，并通过物理网络介质进行实际的数据传输。这层包含了以太网、Wi-Fi等局域网技术以及PPP（点对点协议）等广域网技术。</li>
+</ul>
+<p>防火墙的主要技术：</p>
+<p>静态包过滤</p>
+<ul>
+<li>依据数据包的基本标记来控制数据包</li>
+<li>技术逻辑简单、易于实现，处理速度快</li>
+<li>无法实现对应用层信息过滤处理，配置较复杂</li>
+</ul>
+<p>应用代理</p>
+<ul>
+<li>连接都要通过防火墙进行转发</li>
+<li>提供NAT，隐藏内部网络地址</li>
+</ul>
+<p>状态检测</p>
+<ul>
+<li>创建状态表用于维护连接，安全性高</li>
+<li>安全性高但对性能要求也高</li>
+<li>适应性好，对用户、应用程序透明</li>
+</ul>
+<p>防火墙的部署位置</p>
+<ul>
+<li>可信网络与不可信网络之间</li>
+<li>不同安全级别网络之间</li>
+<li>两个需要隔离的区域之间</li>
+</ul>
+<p>防火墙的部署方式</p>
+<ul>
+<li>单防火墙（无DMZ）部署方式</li>
+<li>单防火墙（DMZ）部署方式</li>
+<li>双防火墙部署方式</li>
+</ul>
+<p>入侵检测分类</p>
+<ul>
+<li>网络入侵检测</li>
+<li>主机入侵检测</li>
+</ul>
+<p>入侵检测技术</p>
+<ul>
+<li>
+<p>误用检测</p>
+</li>
+<li>
+<p>异常检测</p>
+</li>
+</ul>
+<p>误用检测（Misuse Detection）
+误用检测也被称为基于签名的检测，这种方法依赖于已知攻击模式或签名库来进行匹配分析。当网络流量或系统行为与这些预定义的攻击模式相匹配时，即认为发生了入侵行为。误用检测的主要优点是准确性高，对于已知类型的攻击能够提供可靠的检测结果；缺点是对未知攻击或变种攻击的检测能力有限，因为它们依赖于现有的签名数据库。因此，维护一个全面且最新的签名库是关键。</p>
+<p>异常检测（Anomaly Detection）
+异常检测是一种通过建立正常行为模型来识别偏离该模型的行为是否为潜在入侵的技术。它不依赖于特定的攻击模式，而是基于统计学、机器学习等方法来定义什么是“正常”的系统或网络活动。一旦实际发生的活动显著偏离了这个正常模型，则触发警报。这种方法的优点是可以发现新的或未知类型的攻击，因为它关注的是行为的异常而非具体的攻击模式。然而，异常检测也有其局限性，例如较高的误报率（即将合法但不常见的活动错误地标记为异常），以及需要大量的数据和计算资源来准确地建立正常行为模型。</p>
+<h2 id="_8">第八章 信息安全评估</h2>
+<p>风险评估相关要素</p>
+<p>理解资产、威胁、脆弱性、安全风险、安全措施、残余风险等风险评估相关要素及相互关系。</p>
+<p>风险评估途径与方法</p>
+<p>了解基线评估等风险评估途径及自评估、检查评估等风险评估方法；</p>
+<p>了解基于知识的评估，理解定性评估、定量评估的概念及区别并掌握定量分析中量化风险的方法。</p>
+<p>风险评估常用方法：</p>
+<ul>
+<li>基于知识分析</li>
+<li>定量分析</li>
+<li>定性分析</li>
+</ul>
+<p>年度损失预期值（ALE） =  SLE  x 年度发生率（ARO）
+单次损失预期值（SLE） =  暴露因素（EF）x  资产价值（AV）</p>
+<p>实施安全措施后对措施有效性进行再评估</p>
+<p>在对于不可接受的风险选择适当安全措施后，为确保安全措施的有效性，可进行再评估，以判断实施安全措施后的残余风险是否已经降低到可接受的水平。</p>
+<p>某些风险可能在选择了适当的安全措施后， 残余风险的结果仍处于不可接受的风险范围内， 应考虑是否接受此风险或进一步增加相应的安全措施。</p>
+<p>风险评估相关文档：</p>
+<p>根据图片中的文字内容，提取的文字如下：</p>
+<p>准备阶段</p>
+<ul>
+<li>风险评估计划书</li>
+<li>风险评估方案</li>
+<li>风险评估方法和工具列表</li>
+</ul>
+<p>风险要素识别</p>
+<ul>
+<li>资产清单</li>
+<li>威胁列表</li>
+<li>脆弱性列表</li>
+<li>已有安全措施列表</li>
+</ul>
+<p>风险分析</p>
+<ul>
+<li>风险计算报告</li>
+</ul>
+<p>风险结果判定</p>
+<ul>
+<li>风险程度等级列表</li>
+<li>风险评估报告</li>
+</ul>
+<p>CC标准是计算机安全认证的国际标准（ISO/IEC15408）。CC标准中四个关键概念。</p>
+<ul>
+<li>评估对象TOE (Target of Evaluation)</li>
+<li>保护轮廓PP (Protection Profile)</li>
+<li>安全目标ST (Security Target)</li>
+<li>评估保证级别EAL (Evaluation Assurance Level)</li>
+</ul>
+<h2 id="_9">第九章 信息安全支撑技术</h2>
+<p>古典密码主要分类</p>
+<ul>
+<li>替代密码</li>
+<li>置换密码</li>
+<li>替代密码与置换密码的组合</li>
+</ul>
+<p>影响密码系统安全性的基本因素
+密码算法复杂度、密钥机密性、密钥长度
+科克霍夫（Kerckhoff）原则：密码体制应该对外公开，仅需对密钥进行保密；如果一个密码系统需要保密的越多，可能的弱点也越多</p>
+<p>评估密码系统安全性</p>
+<p>无条件安全、计算安全性、可证明安全性</p>
+<p>PKI架构</p>
+<ul>
+<li>CA（认证权威）</li>
+<li>RA（注册权威）</li>
+<li>证书存放管理（目录服务）</li>
+<li>终端实体（证书持有者和应用程序）</li>
+</ul>
+<p>鉴别的类型
+* 单向鉴别、双向鉴别、第三方鉴别</p>
+<p>鉴别的方式</p>
+<ul>
+<li>基于实体所知（知识、密码、PIN码等）</li>
+<li>基于实体所有（身份证、钥匙、智能卡、令牌等）</li>
+<li>基于实体特征（指纹，笔迹，声音，视网膜等）</li>
+<li>双因素、多因素认证</li>
+</ul>
+<p>单点登录概念</p>
+<ul>
+<li>单一身份认证，身份信息集中管理，一次认证就可以访问其授权的所有网络资源</li>
+<li>单点登录实质是安全凭证在多个应用系统之间的传递或共享</li>
+</ul>
+<p>单点登录的安全优势</p>
+<ul>
+<li>减轻安全维护工作量，减少错误</li>
+<li>提高效率</li>
+<li>统一安全可靠的登录验证</li>
+</ul>
+<p>访问控制模型：</p>
+<ul>
+<li>自主访问控制DAC</li>
+<li>强制访问控制MAC</li>
+<li>基于角色访问控制RBAC</li>
+</ul>
+<h2 id="_10">第十章 业务连续性</h2>
+<p>业务影响分析</p>
+<ul>
+<li>确定组织持续运行的关键资产、针对这些资产的威胁、评估每种资产出现的威胁及对业务的影响 </li>
+<li>提供量化度量以确定投入资源的优先顺序</li>
+<li>工作内容 </li>
+<li>确定业务优先级</li>
+<li>风险分析</li>
+<li>资产优先级划分</li>
+</ul>
+<p>恢复时间目标（RTO）是指在发生灾难或系统故障之后，业务功能必须恢复正常运作的时间限制。简单来说，RTO定义了从灾难发生到业务恢复正常运行所需的最大可容忍的停机时间。这个指标对于确保企业在遭遇突发情况时能够迅速恢复至关重要的服务至关重要。RTO越短，意味着企业需要更快地恢复其业务操作，通常这也意味着更高的成本投入，因为更快速的恢复策略往往需要更多的资源和技术支持。</p>
+<p>恢复点目标（RPO）则是指在灾难事件中允许的数据丢失量的最大值，即可以接受的数据丢失的时间窗口。RPO实际上是衡量数据备份频率的一个标准，它决定了数据恢复时能够回到的最近时间点。例如，如果一个企业的RPO设定为1小时，这意味着该企业愿意接受最多1小时内产生的数据丢失。RPO的时间长度决定了数据备份的策略和频率——较短的RPO要求更加频繁的数据备份或者实时的数据复制解决方案。</p>
+<p>恢复点目标（RPO）</p>
+<ul>
+<li>定义：灾难发生后，系统和数据必须恢复到的时间点要求</li>
+<li>代表了当灾难发生时允许丢失的数据量</li>
+</ul>
+<p>恢复时间目标（RTO）</p>
+<ul>
+<li>定义：灾难发生后，信息系统和业务功能从停顿到必须恢复的时间要求</li>
+<li>代表了企业能容忍的信息系统和业务功能恢复的时间</li>
+</ul>
+<p>风险处置方式：</p>
+<ul>
+<li>风险降低</li>
+<li>风险转移</li>
+<li>风险规避</li>
+<li>风险接受</li>
+</ul>
+<p>信息安全事件分级：</p>
+<p>•特别重大事件（I级）</p>
+<p>•重大事件（II级）</p>
+<p>•较大事件（III级）</p>
+<p>•一般事件（IV级）</p>
+<p>计算机取证步骤：</p>
+<p>准备、保护、提取、分析和提交。</p>
+<p>对于电子证据，取证工作主要围绕两方面进行：证据的获取和证据的分析，而不是获取和保护。</p>
+<p>应急响应管理：</p>
+<p>准备、检测、遏制、根除、恢复和跟踪总结</p>
+<p>完全备份（Full Backup）</p>
+<ul>
+<li><strong>描述</strong>：完全备份是指对选定的所有文件和文件夹进行完整复制。</li>
+<li><strong>特点</strong>：</li>
+<li><strong>优点</strong>：恢复速度快，因为只需要一个备份集即可完成恢复。适合数据量不大或需要快速恢复的情况。</li>
+<li><strong>缺点</strong>：占用存储空间大，因为每次备份都包含了所有数据；对系统资源要求较高，备份时间较长。</li>
+<li><strong>备份时间速度排名</strong>：最慢</li>
+<li><strong>恢复时间速度排名</strong>：最快</li>
+</ul>
+<p>增量备份（Incremental Backup）</p>
+<ul>
+<li><strong>描述</strong>：增量备份只备份自上次任何类型备份以来更改过的文件。</li>
+<li><strong>特点</strong>：</li>
+<li><strong>优点</strong>：节省存储空间和时间，因为只备份变化的部分。适合频繁的数据变动且希望减少备份时间和存储成本的场景。</li>
+<li><strong>缺点</strong>：恢复过程较复杂且耗时，因为需要依赖多个备份集（首先是最近的一次完全备份，然后依次应用后续的增量备份）。</li>
+<li><strong>备份时间速度排名</strong>：最快</li>
+<li><strong>恢复时间速度排名</strong>：最慢</li>
+</ul>
+<p>差异备份（Differential Backup）</p>
+<ul>
+<li><strong>描述</strong>：差异备份备份自上次完全备份以来所有更改过的文件。</li>
+<li><strong>特点</strong>：</li>
+<li><strong>优点</strong>：相比增量备份，恢复较为简单，因为它只需最近的一次完全备份加上最后一次差异备份。适合需要较快恢复但又想减少完全备份频率的情况。</li>
+<li><strong>缺点</strong>：随着时间推移，差异备份的数据量会逐渐增大，接近于完全备份的大小。</li>
+<li><strong>备份时间速度排名</strong>：中等</li>
+<li><strong>恢复时间速度排名</strong>：较快</li>
+</ul>
+<p>总结</p>
+<ul>
+<li><strong>备份时间从快到慢排序</strong>：</li>
+<li>增量备份</li>
+<li>差异备份</li>
+<li>
+<p>完全备份</p>
+</li>
+<li>
+<p><strong>恢复时间从快到慢排序</strong>：</p>
+</li>
+<li>完全备份</li>
+<li>差异备份</li>
+<li>增量备份</li>
+</ul>
+<p>完全备份是指备份全部选中的文件夹，并不依赖文件的存档属性来确定备份哪些文件；
+增量备份是针对于上一次备份（无论是哪种备份），备份上一次备份后，所有发生变化的文件；
+差异备份是针对完全备份，备份上一次的完全备份后发生变化的所有文件。
+数据恢复速度方面由快到慢的顺序为完全备份、差异备份、增量备份，备份速度由快到慢顺序为增量备份、差量备份、完全备份。</p>
+<p>RAID（Redundant Array of Independent Disks，独立磁盘冗余阵列）技术通过将多个物理硬盘组合成一个逻辑单元来提高性能、增加冗余或两者兼有。以下是几种常见的RAID级别及其特点：</p>
+<p>RAID 0</p>
+<ul>
+<li><strong>描述</strong>：条带化（Striping），数据被分割成块并均匀分布于所有磁盘上。</li>
+<li><strong>优点</strong>：提供最佳的读写性能，因为数据可以同时从多个磁盘读取和写入。</li>
+<li><strong>缺点</strong>：没有任何冗余，单个磁盘故障会导致整个阵列的数据丢失。</li>
+<li><strong>适用场景</strong>：对性能要求高且不关心数据丢失风险的场合。</li>
+</ul>
+<p>RAID 1</p>
+<ul>
+<li><strong>描述</strong>：镜像（Mirroring），数据在至少两个磁盘上做完全相同的拷贝。</li>
+<li><strong>优点</strong>：提供了很好的数据冗余性，只要有一个磁盘正常工作，数据就不会丢失。</li>
+<li><strong>缺点</strong>：存储利用率只有50%，因为一半的空间用于备份数据。</li>
+<li><strong>适用场景</strong>：需要高度数据安全性的环境。</li>
+</ul>
+<p>RAID 5</p>
+<ul>
+<li><strong>描述</strong>：分布式奇偶校验（Distributed Parity），数据分布在所有磁盘上，并且每个条带包含一个奇偶校验位，用于恢复任何一个磁盘上的数据。</li>
+<li><strong>优点</strong>：提供了较好的读性能，支持单磁盘容错，即一块磁盘故障时不会导致数据丢失。</li>
+<li><strong>缺点</strong>：写操作效率较低，因为需要计算奇偶校验信息；重建期间性能下降明显。</li>
+<li><strong>适用场景</strong>：适用于大多数企业级应用，寻求平衡性能与数据保护。</li>
+</ul>
+<p>RAID 6</p>
+<ul>
+<li><strong>描述</strong>：双重分布式奇偶校验（Dual Distributed Parity），类似于RAID 5，但增加了第二个独立的奇偶校验集。</li>
+<li><strong>优点</strong>：允许同时有两个磁盘故障而不丢失数据，提高了数据的安全性。</li>
+<li><strong>缺点</strong>：相比RAID 5，写性能稍差，同样存在重建期间性能下降的问题。</li>
+<li><strong>适用场景</strong>：对于数据安全性和可用性要求极高的环境。</li>
+</ul>
+<p>RAID 10（也称为RAID 1+0）</p>
+<ul>
+<li><strong>描述</strong>：结合了RAID 1的镜像技术和RAID 0的条带化技术，首先创建一组镜像对，然后在这组镜像对之间进行条带化处理。</li>
+<li><strong>优点</strong>：既提供了良好的读写性能，又具备较高的数据冗余性，即使一个磁盘组中的所有磁盘都失败，只要另一个磁盘组完好无损，数据仍然安全。</li>
+<li><strong>缺点</strong>：成本较高，因为至少需要四个磁盘，而且实际可用容量仅为总容量的一半。</li>
+<li><strong>适用场景</strong>：高性能需求和高可靠性要求的应用。</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../CCNP%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CCNP/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 学习">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                学习
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../OSCP%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/0x01_OSCP%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" class="md-footer__link md-footer__link--next" aria-label="Next: OSCP学习笔记">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                OSCP学习笔记
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 h4m5t
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.zhihu.com/people/h4m5t" target="_blank" rel="noopener" title="www.zhihu.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M170.54 148.13v217.54l23.43.01 7.71 26.37 42.01-26.37h49.53V148.13zm97.75 193.93h-27.94l-27.9 17.51-5.08-17.47-11.9-.04V171.75h72.82zm-118.46-94.39H97.5c1.74-27.1 2.2-51.59 2.2-73.46h51.16s1.97-22.56-8.58-22.31h-88.5c3.49-13.12 7.87-26.66 13.12-40.67 0 0-24.07 0-32.27 21.57-3.39 8.9-13.21 43.14-30.7 78.12 5.89-.64 25.37-1.18 36.84-22.21 2.11-5.89 2.51-6.66 5.14-14.53h28.87c0 10.5-1.2 66.88-1.68 73.44H20.83c-11.74 0-15.56 23.62-15.56 23.62h65.58C66.45 321.1 42.83 363.12 0 396.34c20.49 5.85 40.91-.93 51-9.9 0 0 22.98-20.9 35.59-69.25l53.96 64.94s7.91-26.89-1.24-39.99c-7.58-8.92-28.06-33.06-36.79-41.81L87.9 311.95c4.36-13.98 6.99-27.55 7.87-40.67h61.65s-.09-23.62-7.59-23.62zm412.02-1.6c20.83-25.64 44.98-58.57 44.98-58.57s-18.65-14.8-27.38-4.06c-6 8.15-36.83 48.2-36.83 48.2zm-150.09-59.09c-9.01-8.25-25.91 2.13-25.91 2.13s39.52 55.04 41.12 57.45l19.46-13.73s-25.67-37.61-34.66-45.86h-.01zM640 258.35c-19.78 0-130.91.93-131.06.93v-101c4.81 0 12.42-.4 22.85-1.2 40.88-2.41 70.13-4 87.77-4.81 0 0 12.22-27.19-.59-33.44-3.07-1.18-23.17 4.58-23.17 4.58s-165.22 16.49-232.36 18.05c1.6 8.82 7.62 17.08 15.78 19.55 13.31 3.48 22.69 1.7 49.15.89 24.83-1.6 43.68-2.43 56.51-2.43v99.81H351.41s2.82 22.31 25.51 22.85h107.94v70.92c0 13.97-11.19 21.99-24.48 21.12-14.08.11-26.08-1.15-41.69-1.81 1.99 3.97 6.33 14.39 19.31 21.84 9.88 4.81 16.17 6.57 26.02 6.57 29.56 0 45.67-17.28 44.89-45.31v-73.32h122.36c9.68 0 8.7-23.78 8.7-23.78z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/h4m5t" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/h4m5t" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://medium.com/@h4m5t" target="_blank" rel="noopener" title="medium.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M180.5 74.262C80.813 74.262 0 155.633 0 256s80.819 181.738 180.5 181.738S361 356.373 361 256 280.191 74.262 180.5 74.262m288.25 10.646c-49.845 0-90.245 76.619-90.245 171.095s40.406 171.1 90.251 171.1 90.251-76.619 90.251-171.1H559c0-94.503-40.4-171.095-90.248-171.095Zm139.506 17.821c-17.526 0-31.735 68.628-31.735 153.274s14.2 153.274 31.735 153.274S640 340.631 640 256c0-84.649-14.215-153.271-31.742-153.271Z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.top"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": 1.0}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  </body>
+</html>
